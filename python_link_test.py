@@ -40,7 +40,7 @@ PATIENCE_TIME = 10
 
 
 link_to_click = {
-        '01'        : ['Status'     ,'//*[@id="Status-link"]/a'               ,'//*[@id="Supplies"]'], 
+        '01'        : ['Status'     ,'//*[@id="Status-link1"]/a'               ,'//*[@id="Supplies"]'], 
         '02'        : ['Settings'   ,'//*[@id="Settings-link"]/a'             ,'/html/body/div[2]/div[3]/div[3]/div[2]/div/div[2]/div[1]/div[1]/a/img'],
         '03'        : ['Device'     ,'//*[@id="Settings-Device-link"]/a'      ,'//*[@id="ScreenTimeout"]'],
 	'04'        : ['Print'      ,'//*[@id="Settings-Print-link"]/a'       ,'//*[@id="PrintLayout"]'],
@@ -59,7 +59,7 @@ link_to_click = {
         '17'        : ['Shortcuts'  , '//*[@id="ShortcutsManagement-link"]/a' ,'/html/body/div[2]/div[3]/div[3]/div[2]/div[2]/ul/li/div/div[3]/table/thead/tr/th[2]'],
         '18'        : ['Bookmark Setup','//*[@id="BookmarkSetup-link"]/a'     ,'/html/body/div[2]/div[3]/div[3]/div[2]/div[2]/ul/li[2]/div/ul/li/div/button'],
         '19'        : ['Apps'       ,'//*[@id="Applications-link"]/a'         ,'/html/body/div[2]/div[3]/div[3]/div[2]/div[2]/ul/li[1]/div/div[3]/ul[1]/li[1]/div/button'],
-        '20'        : ['Site Map'   ,'/html/body/div[2]/div[3]/div[2]/div[3]/div/a' ,'/html/body/div[2]/div[3]/div[3]/div[2]/div[2]/ul/li[1]/div/div[3]/ul[1]/li/div/div/div[1]/div[1]/a']
+        '20'        : ['Site Map'   ,'/html/body/div[2]/div[3]/div[2]/div[3]/div/a' ,'/html/body/div[2]/div[3]/div[3]/div[2]/div[2]/ul/li[1]/div/div[3]/ul[1]/li/div/div/div[1]/div[1]/a'],
 
          }
 
@@ -90,8 +90,8 @@ while (count <= execution):
 
     for x in link_to_click_sorted:
 
-	link_element  = link_to_click[x][1]
-        wait_element  = link_to_click[x][2]
+	link_element  = link_to_click[x][2]
+        wait_element  = link_to_click[x][3]
    
         try:
             if link_to_click[x][0] == "Status":
